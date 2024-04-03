@@ -1,9 +1,31 @@
-<ActionBar title="Details"></ActionBar>
+<header-action menuItem="agencySignUp" useBack="true" useRefresh="false"></header-action>
 
-<FlexboxLayout flexDirection="column">
-  <FlexboxLayout class="m-15">
-    <Label class="h2" [text]="item.id + '. '"></Label>
-    <Label class="h2" [text]="item.name"></Label>
-  </FlexboxLayout>
-  <Label class="h4 m-15" [text]="item.role"></Label>
-</FlexboxLayout>
+<GridLayout rows="*,auto" columns="*,*" dock="top">
+    <ScrollView row="0" col="0" colSpan="2" orientation="vertical">
+        <DockLayout height="100%" class="page__content-inner">
+            <MDTabs selectedIndex="0" animationEnabled="false">
+                <MDTabStrip id="strip">
+                    <MDTabStripItem>
+                        <Label text="Signed Up"></Label>
+                    </MDTabStripItem>
+                    <MDTabStripItem>
+                        <Label text="Not Signed Up"> </Label>
+                    </MDTabStripItem>
+                </MDTabStrip>
+
+                <MDTabContentItem>
+                    <GridLayout rows="25,auto,*" columns="*">
+                        <Label row="0" class="center sx-blue" text="hello"></Label>
+                        
+                    </GridLayout>
+                </MDTabContentItem>
+                <MDTabContentItem>
+                  <GridLayout rows="25,auto,*" columns="*">
+                      <Label row="0" class="center sx-blue" text="there"></Label>
+                      
+                  </GridLayout>
+              </MDTabContentItem>
+            </MDTabs>
+        </DockLayout>
+    </ScrollView>
+</GridLayout>
